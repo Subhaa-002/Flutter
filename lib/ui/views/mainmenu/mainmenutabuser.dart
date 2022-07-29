@@ -1,3 +1,4 @@
+import 'package:devops_demo/ui/views/CC.dart';
 import 'package:flutter/material.dart';
 import 'package:devops_demo/resources/texts/strings.dart';
 import 'package:devops_demo/ui/views/aboutus.dart';
@@ -41,11 +42,11 @@ class MainMenuTabUserState extends State<MainMenuTabUser>
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 9,
+      length: 10,
       child: Scaffold(
         appBar: AppBar(
           bottom: TabBar(
-            indicatorWeight: 5,
+            indicatorWeight: 6,
             isScrollable: true,
             tabs: [
               Tab(icon: Icon(Icons.family_restroom), child: Text(Strings.TITLE_MM_TB_MM)),
@@ -63,13 +64,15 @@ class MainMenuTabUserState extends State<MainMenuTabUser>
               Tab(
                   icon: Icon(Icons.contact_support),
                   child: Text(Strings.TITLE_MM_TB_DPSR)),
+              Tab(icon: Icon(Icons.abc_rounded), child: Text(Strings.TITLE_MM_TB_CC))
+
             ],
           ),
           title: Center(
             child: Column(
               children: [
                 Text(
-                  Strings.DET_MM_TB_WEL + "BITS User",
+                  Strings.DET_MM_TB_WEL + "KRCE User",
                 ),
                 Text(
                     greeting()
@@ -96,6 +99,7 @@ class MainMenuTabUserState extends State<MainMenuTabUser>
             Knowledge(),
             Charity(),
             AboutUs(),
+            CC(),
           ],
         ),
       ),
